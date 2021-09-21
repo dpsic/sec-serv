@@ -1,7 +1,7 @@
 package com.example.secserv.api;
 
 import com.example.secserv.entites.AppRole;
-import com.example.secserv.entites.AppUser;
+
 import com.example.secserv.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,5 +22,10 @@ public class RoleController {
             return accountService.addNewRole(appRole);
         }
 
+    @GetMapping()
+    public List<AppRole> appRoles(){
+
+        return  accountService.listRoles();
+    }
 
     }

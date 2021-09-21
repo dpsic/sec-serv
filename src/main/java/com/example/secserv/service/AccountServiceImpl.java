@@ -25,6 +25,7 @@ PasswordEncoder passwordEncoder;
 String pw =appUser.getPassword();
 appUser.setPassword(passwordEncoder.encode(pw));
         return appUserRepo.save(appUser);
+
     }
 
     @Override
@@ -51,5 +52,11 @@ appUser.getAppRoles().add(appRole);
         return appUserRepo.findAll();
 
     }
+    @Override
+    public List<AppRole> listRoles() {
+        return appRoleRepo.findAll();
+
+    }
+
 
 }
