@@ -31,8 +31,8 @@ public class UserController {
     }}
 @Data
 class RoleUserForm{
-    private String UserName;
-    private String RoleName;
+    private String userName;
+    private String roleName;
 }
 
 

@@ -22,11 +22,11 @@ public class SecServApplication {
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-//@Bean
+@Bean
     CommandLineRunner start(AccountService accountService){
 
         return args -> {
-          /* accountService.addNewRole(new AppRole(null,"user"));
+         accountService.addNewRole(new AppRole(null,"user"));
             accountService.addNewRole(new AppRole(null,"admin"));
             accountService.addNewRole(new AppRole(null,"customer_manager"));
             accountService.addNewRole(new AppRole(null,"produtc_manager"));
@@ -34,12 +34,12 @@ public class SecServApplication {
 
         accountService.addNewUser(new AppUser(null,"user1","1234",new ArrayList<>()));
         accountService.addNewUser(new AppUser(null,"admin","1234",new ArrayList<>()));
-            accountService.addNewUser(new AppUser(null,"user2","1234",new ArrayList<>()));*/
+            accountService.addNewUser(new AppUser(null,"user2","1234",new ArrayList<>()));
             accountService.addNewUser(new AppUser(null,"nouhaila","1234",new ArrayList<>()));
 
-           /* accountService.addRoleToUser("user1","user");
+          accountService.addRoleToUser("user1","user");
             accountService.addRoleToUser("admin","user");
-            accountService.addRoleToUser("admin","admin");*/
+            accountService.addRoleToUser("admin","admin");
         };
     }
 }
